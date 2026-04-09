@@ -66,6 +66,45 @@ CREATE TABLE cart_items (
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
 
-===================================  Phase 2 ===============================
+================  Phase 2 => Backend Development (Java Spring Boot) ===================
 
+
+Now, we build the Java application that will act as the brain of our operation, handling API requests, business logic, and talking to the MySQL database we just created.
+
+              ---  2.1. Initialize the Spring Boot Project  ----
+
+Open your IDE (IntelliJ IDEA or VS Code with Java extensions).
+Go to Spring Initializr to generate the project skeleton.
+
+Configure it like this:
+
+1. Project: Maven
+
+2. Language: Java
+
+3. Spring Boot: 3.1.x or 3.2.x (stable version)
+
+4. Group: com.flipkart
+
+5. Artifact: clone-backend
+
+6. Dependencies: Add these four:
+
+Spring Web (for building REST APIs)
+Spring Data JPA (to easily connect and query the database)
+MySQL Driver (to connect Java to MySQL)
+Spring Boot DevTools (for automatic restarts during development) 
+Click "Generate", download the .zip file, and extract it.
+
+Open the extracted folder as a project in your IDE.
+
+Project: Maven
+Language: Java
+Spring Boot: 3.5.13
+Group: com.flipkart
+Artifact: clone-backend
+Package name: com.flipkart.clone.backend ✅
+Packaging: Jar
+Java: 17 ✅
+Config: application.properties (simpler for beginners)
 
