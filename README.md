@@ -117,3 +117,16 @@ Navigate to the file src/main/resources/application.properties.
 
 Replace the contents of this file with the following configuration. This tells Spring Boot to use MySQL, where it is, your username, and password.
 
+# MySQL Database Connection Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/flipkart_clone_db?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=YOUR_MYSQL_PASSWORD
+
+# JPA Configuration (to auto-create tables based on our Java models)
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+If using AWS RDS: Replace localhost:3306 with your RDS Endpoint. It will look like jdbc:mysql://flipkart-clone-db.xxxxxx.us-east-1.rds.amazonaws.com:3306/flipkart_clone_db.
+
+Replace the username and password with the ones you created for your database.
