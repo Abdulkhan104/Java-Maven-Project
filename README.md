@@ -108,3 +108,12 @@ Packaging: Jar
 Java: 17 ✅
 Config: application.properties (simpler for beginners)
 
+===========================
+
+2.2. Configure the Database Connection
+You need to tell Spring Boot how to find your MySQL database.
+
+Navigate to the file src/main/resources/application.properties.
+
+Replace the contents of this file with the following configuration. This tells Spring Boot to use MySQL, where it is, your username, and password.
+
