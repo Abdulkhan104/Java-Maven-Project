@@ -1,8 +1,3 @@
-// package com.flipkart.clonebackend.controller;
-
-// public class CategoryController {
-    
-// }
 package com.flipkart.clonebackend.controller;
 
 import com.flipkart.clonebackend.model.Category;
@@ -14,16 +9,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/categories")
+@CrossOrigin(origins = "http://localhost:3001")  // Add this line
 public class CategoryController {
 
     private final CategoryRepository categoryRepository;
 
-    // Constructor Injection (Best Practice ✅)
     public CategoryController(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
 
-    // GET: Fetch all categories
     @GetMapping
     public List<Product> getAllCategories() {
         return categoryRepository.findAll();
