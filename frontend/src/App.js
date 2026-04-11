@@ -1,19 +1,17 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HomePage from './pages/HomePage';
-// import CartPage from './pages/CartPage'; // We'll create this later
-import './App.css';
+
+function Home() {
+  return <h1>Home Page - Working!</h1>;
+}
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navbar />
+      <div>
+        <h1>Navbar Placeholder</h1>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          {/* <Route path="/cart" element={<CartPage />} /> */}
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
     </Router>
